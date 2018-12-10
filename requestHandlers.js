@@ -4,8 +4,8 @@ function start(response) {
     console.log('Request handler "start" was called.')
 
 
-    exec("ls -lah", function (error, stdout, stderr) {
-        response.writeHead(200, {'Content-Type': 'text/plain'})
+    exec("dir", function (error, stdout, stderr) {
+        response.writeHead(200, {'Content-Type': 'text/plain;'})
         response.write(stdout)
         response.end()
     })
@@ -13,7 +13,7 @@ function start(response) {
 }
 function upload(response) {
     console.log('Request handler "upload" was called')
-        response.writeHead(200, {'Content-Type': 'text/plain'})
+        response.writeHead(200, {'Content-Type': 'text/plain;'})
         response.write('Hello Upload')
         response.end()
 }
